@@ -1,14 +1,16 @@
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  let slugs = ['1', '2', '3', '4', '5', '6'];
-  return slugs.map((slug) => ({ id: slug }));
-}
+import Link from "next/link";
 
 export default function PhotoPage({
   params: { id },
 }: {
   params: { id: string };
 }) {
-  return <div className="card">{id}</div>;
+  return (
+    <div>
+      <div className="card">{id}</div>
+      <Link href="/">Home</Link>
+      <Link href="/photos/1">One</Link>
+      <Link href="/photos/2">Two</Link>
+    </div>
+  );
 }

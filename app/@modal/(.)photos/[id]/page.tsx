@@ -1,9 +1,9 @@
-import { Modal } from './modal';
+"use client";
 
 export default function PhotoModal({
   params: { id: photoId },
 }: {
   params: { id: string };
 }) {
-  return <Modal>{photoId}</Modal>;
+  return <>{photoId}</>;
 }
